@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import { Label } from "./Filter.stiled";
+import PropTypes from 'prop-types';
+import { Label } from './Filter.stiled';
 
-const Filter = ({ filter, inputHandler }) => {
+const Filter = ({ value, inputHandler }) => {
   return (
     <>
       <p>Find contacts by name</p>
@@ -11,7 +11,7 @@ const Filter = ({ filter, inputHandler }) => {
           type="text"
           name="filter"
           placeholder="Enter name..."
-          value={filter}
+          value={value}
         />
       </Label>
     </>
@@ -19,7 +19,7 @@ const Filter = ({ filter, inputHandler }) => {
 };
 
 Filter.propTypes = {
-  filter: PropTypes.string,
+  value: PropTypes.string,
   inputHandler: PropTypes.func,
 };
 
